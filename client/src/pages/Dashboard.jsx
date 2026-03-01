@@ -77,7 +77,7 @@ function AddElementModal({ onClose, onAdd }) {
                     </button>
                 </div>
 
-                {err && <div className="alert-banner warning" style={{ marginBottom: 16 }}><span>⚠️</span>{err}</div>}
+                {err && <div className="alert-banner warning" style={{ marginBottom: 16 }}><span></span>{err}</div>}
 
                 <form onSubmit={handleSubmit}>
                     <div className="form-grid-2">
@@ -244,10 +244,10 @@ export default function Dashboard() {
     const removeElement = (id) => setElements(prev => prev.filter(e => e.id !== id));
 
     const kpis = [
-        { label: 'Slabs in Curing', value: elements.filter(e => e.status === 'Curing').length, icon: '🧱', color: 'var(--cyan)' },
-        { label: 'Ready to De-mould', value: elements.filter(e => e.status === 'Ready to De-mould').length, icon: '✅', color: 'var(--green)' },
-        { label: 'Total Elements', value: elements.length, icon: '📦', color: 'var(--orange)' },
-        { label: 'Active Sensors', value: elements.filter(e => e.status !== 'Completed').length, icon: '📡', color: 'var(--purple)' },
+        { label: 'Slabs in Curing', value: elements.filter(e => e.status === 'Curing').length, icon: '', color: 'var(--cyan)' },
+        { label: 'Ready to De-mould', value: elements.filter(e => e.status === 'Ready to De-mould').length, icon: '', color: 'var(--green)' },
+        { label: 'Total Elements', value: elements.length, icon: '', color: 'var(--orange)' },
+        { label: 'Active Sensors', value: elements.filter(e => e.status !== 'Completed').length, icon: '', color: 'var(--purple)' },
     ];
 
     return (
