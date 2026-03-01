@@ -4,6 +4,7 @@ import {
     LayoutDashboard, Radio, Brain, Box, BarChart3,
     Database, Settings, LogOut, Thermometer, Droplets, Zap
 } from 'lucide-react';
+import Grid from './Grid';
 
 const API = 'http://localhost:5000/api';
 const STORAGE_KEY = 'constructai_settings';
@@ -52,6 +53,7 @@ export default function Layout() {
 
     return (
         <div className="app-shell">
+            <Grid infiniteGrid={true} fadeDistance={25} sectionColor="#f59e0b" cellColor="#222" sectionSize={1} cellSize={0.5} />
             {/* ── Sidebar ─────────────────────────────────────────── */}
             <aside className="sidebar">
                 <div className="sidebar-logo">

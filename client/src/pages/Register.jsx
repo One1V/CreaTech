@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Grid from '../components/Grid';
 
 const API = 'http://localhost:5000/api';
 
@@ -33,6 +34,7 @@ export default function Register() {
             minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
             background: 'var(--bg-primary)', position: 'relative', overflow: 'hidden'
         }}>
+            <Grid infiniteGrid={true} fadeDistance={25} sectionColor="#f59e0b" cellColor="#222" sectionSize={1} cellSize={0.5} />
             <div className="hero-gradient" />
             <div style={{ width: '100%', maxWidth: 440, padding: '0 24px', zIndex: 1 }} className="fade-in">
                 <div style={{ textAlign: 'center', marginBottom: 32 }}>
